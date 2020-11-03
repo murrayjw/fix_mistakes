@@ -13,6 +13,9 @@
 #'
 #'
 paste_comma <- function(x) {
+  if(is.null(x)) {
+    return(NULL)
+    }
   cat(paste(shQuote(x, type="cmd"), collapse=", "))
 }
 
